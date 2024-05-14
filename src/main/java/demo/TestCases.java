@@ -99,7 +99,8 @@ public class TestCases {
         driver.findElement(By.xpath("//div[@class='normal absolute left-0 top-0 whitespace-nowrap font-normal' and text()='Submissions']")).click();
         Thread.sleep(5000);
         //boolean result = driver.findElement(By.xpath("//a[text()='Register or Sign In']")).isDisplayed();
-        boolean result = driver.findElement(By.xpath("//span[contains(text(),'need')]")).isDisplayed();
+        //boolean result = driver.findElement(By.xpath("//span[contains(text(),'need')]")).isDisplayed();
+        boolean result = driver.findElement((By.xpath("//a[contains(text(),'Register or Sign In')]"))).isDisplayed();
 
         if(result){
             System.out.println("Register or Sign In is displayed");
