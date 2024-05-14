@@ -100,9 +100,11 @@ public class TestCases {
         Thread.sleep(5000);
         //boolean result = driver.findElement(By.xpath("//a[text()='Register or Sign In']")).isDisplayed();
         //boolean result = driver.findElement(By.xpath("//span[contains(text(),'need')]")).isDisplayed();
-        boolean result = driver.findElement((By.xpath("//a[contains(text(),'Register or Sign In')]"))).isDisplayed();
+        //boolean result = driver.findElement((By.xpath("//a[contains(text(),'Register or Sign In')]"))).isDisplayed();
+        String text = driver.findElement((By.xpath("//a[contains(text(),'Register or Sign In')]"))).getText();
 
-        if(result){
+
+        if(text.contains("Register or Sign In")){
             System.out.println("Register or Sign In is displayed");
         }
         else
